@@ -1,3 +1,6 @@
+library(rio)
+library(dplyr)
+
 # write a function to get eucledian distance between 2 vectors
 euc_dist <- function(v1, v2){
   dist_sum <- 0
@@ -36,3 +39,23 @@ while(i > 1){
   i = i + 1
 }
 
+getwd()
+setwd("c:/USF MSHI/HS 611/lecture/lab")
+Kazo <- read.csv("Kazo_0.csv", stringsAsFactors = F)
+class(Kazo)
+#structure function gives you an overview of the data frame
+str(Kazo)
+summary(Kazo)
+glimpse(Kazo)
+
+nrow(Kazo)
+colnames(Kazo)
+age <- Kazo$age
+typeof(age)
+is.vector(age)
+mean(age)
+sum(Kazo$HIV == 1)
+Kazo$male 
+
+sum(Kazo$male == 1)
+sum(Kazo$male == 0)
